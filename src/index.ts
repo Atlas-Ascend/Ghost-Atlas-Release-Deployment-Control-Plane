@@ -2,6 +2,7 @@ import { AdapterRegistry, DeployHookAdapter } from "./adapters.js";
 import { ReleaseDeploymentEngine } from "./engine.js";
 import { EstateEventBus } from "./events.js";
 import { createControlPlaneServer } from "./http.js";
+import { startPresenceAgent } from "./presence.js";
 import { ControlPlaneStore } from "./store.js";
 
 const port = Number(process.env.PORT ?? 8787);
@@ -34,4 +35,5 @@ const server = createControlPlaneServer(engine, events);
 
 server.listen(port, "0.0.0.0", () => {
   console.log(`Ghost Atlas Release Deployment Control Plane listening on :${port}`);
+  startPresenceAgent();
 });
