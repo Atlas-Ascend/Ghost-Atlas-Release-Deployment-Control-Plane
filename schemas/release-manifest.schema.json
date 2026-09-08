@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ghostatlas.local/schemas/release-manifest.schema.json",
+  "title": "Ghost Atlas Release Manifest",
+  "type": "object",
+  "required": ["releaseId", "createdAt", "build", "state"],
+  "properties": {
+    "releaseId": { "type": "string", "pattern": "^GA-REL-" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "state": {
+      "type": "string",
+      "enum": ["qualified", "promoted", "deploying", "healthy", "failed", "rolled_back"]
+    },
+    "environment": {
+      "type": "string",
+      "enum": ["development", "staging", "production"]
+    },
+    "build": {
+      "type": "object",
+      "required": ["buildId", "artifactSha", "buildTruth", "devos", "seca", "version", "service"],
+      "properties": {
+        "buildId": { "type": "string", "minLength": 1 },
+        "artifactSha": { "type": "string", "minLength": 1 },
+        "buildTruth": { "const": "PASS" },
+        "devos": { "const": "PASS" },
+        "seca": { "const": "PASS" },
+        "version": { "type": "string", "minLength": 1 },
+        "service": { "type": "string", "minLength": 1 },
+        "artifactUri": { "type": "string" },
+        "sourceRepository": { "type": "string" },
+        "sourceCommit": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "migration": {
+      "type": "object",
+      "required": ["required"],
+      "properties": {
+        "required": { "type": "boolean" },
+        "migrationId": { "type": "string" },
+        "reversible": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
