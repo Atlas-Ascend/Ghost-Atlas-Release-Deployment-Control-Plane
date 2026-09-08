@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ghostatlas.local/schemas/site-release-receipt.schema.json",
+  "title": "Ghost Atlas Site Release Receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "releaseId", "siteId", "officeId", "domain", "commitSha", "deploymentId", "environment", "checks", "proofRefs", "timestamp"],
+  "properties": {
+    "schema": { "const": "ghost-atlas.site-release-receipt.v1" },
+    "releaseId": { "type": "string", "minLength": 4 },
+    "siteId": { "type": "string", "pattern": "^WDP-[0-9]{3}$" },
+    "officeId": { "type": "string", "pattern": "^OFFICE-[A-Z0-9-]+$" },
+    "domain": { "type": "string" },
+    "commitSha": { "type": "string", "minLength": 7 },
+    "deploymentId": { "type": "string", "minLength": 4 },
+    "environment": { "type": "string", "enum": ["preview", "production"] },
+    "correlationId": { "type": "string" },
+    "runId": { "type": "string" },
+    "identityAuthority": { "const": "Atlas-Ascend/Eden-2.0/office_fabric/public_estate_registry.py" },
+    "checks": {
+      "type": "object",
+      "required": ["build", "dns", "tls", "http", "hostRouting", "identityIsolation", "telemetryContext", "securityBoundary"],
+      "additionalProperties": false,
+      "properties": {
+        "build": { "type": "boolean" },
+        "dns": { "type": "boolean" },
+        "tls": { "type": "boolean" },
+        "http": { "type": "boolean" },
+        "hostRouting": { "type": "boolean" },
+        "identityIsolation": { "type": "boolean" },
+        "telemetryContext": { "type": "boolean" },
+        "securityBoundary": { "type": "boolean" }
+      }
+    },
+    "proofRefs": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "promoted": { "type": "boolean", "default": false }
+  }
+}

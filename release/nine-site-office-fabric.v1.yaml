@@ -1,0 +1,68 @@
+version: "1.0.1"
+id: nine-site-office-fabric
+source_repository: Atlas-Ascend/nextjs-boilerplate
+source_branch: office-fabric-nine-site-estate
+identity_authority: Atlas-Ascend/Eden-2.0/office_fabric/public_estate_registry.py
+release_scope: site-scoped
+receipt_schema: schemas/site-release-receipt.schema.json
+sites:
+  - site_id: WDP-000
+    office_id: OFFICE-EMPIRE-VISION
+    domain: ghostatlasempire.com
+  - site_id: WDP-001
+    office_id: OFFICE-ESTATE-PUBLIC-IO
+    domain: ghostatlasestate.com
+  - site_id: WDP-002
+    office_id: OFFICE-ATLAS-MIND-PRODUCT
+    domain: atlasmind.global
+  - site_id: WDP-003
+    office_id: OFFICE-ALTERED-STATE
+    domain: alteredstate.cloud
+  - site_id: WDP-004
+    office_id: OFFICE-INSTITUTE
+    domain: ghostatlasinstitute.org
+  - site_id: WDP-005
+    office_id: OFFICE-CONSULTING
+    domain: ghostatlasconsulting.com
+  - site_id: WDP-006
+    office_id: OFFICE-AUTOMATED-SYSTEMS
+    domain: atlasautomatedsystems.com
+  - site_id: WDP-007
+    office_id: OFFICE-GLOBAL-ASCENSION
+    domain: globalascension.online
+  - site_id: WDP-008
+    office_id: OFFICE-GHOST-ATLAS-OS
+    domain: ghostatlasos.shop
+required_gates:
+  repository:
+    - build
+    - typecheck
+    - route-generation
+    - canonical-identity-match
+  preview:
+    - http
+    - correct-site-identity
+    - no-cross-site-identity-bleed
+    - telemetry-context
+  production:
+    - dns
+    - tls
+    - host-routing
+    - security-boundary
+    - proofgrid-receipt
+promotion_policy:
+  independent_site_promotion: true
+  all_nine_required_for_estate_release: true
+  partial_site_failure_blocks_estate_release: true
+  rollback_scope: site-or-shared-runtime
+  external_publish_default: disabled
+  repository_proof_is_runtime_proof: false
+events:
+  request: office.release.requested
+  promoted: office.release.promoted
+  failure: office.runtime.degraded
+proof:
+  authority: ProofGrid
+  verifier: SECA/DevOS
+  security: Medusa
+  memory: Thoth
