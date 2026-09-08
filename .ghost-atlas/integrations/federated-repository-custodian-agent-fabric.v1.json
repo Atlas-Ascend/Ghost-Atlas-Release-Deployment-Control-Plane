@@ -1,0 +1,11 @@
+{
+  "schema":"ga.farc.integration.v1",
+  "fabric":"Atlas-Ascend/Federated-Autonomous-Repository-Custodian-Agent-Fabric",
+  "campaign":"GA-FARC-AUTONOMOUS-CUSTODIAN-CONVERGENCE-001",
+  "hostRole":"release-and-deployment-promotion-gate",
+  "accepts":"verified release candidates originating from authorized custodian remediation",
+  "requires":["SECA_DEVOS_PASS","PROOFGRID_BUILD_RECEIPT","declared deployment target"],
+  "providers":["Render","Vercel","EDEN","other registered Vishvarupa targets"],
+  "rule":"Repository custodians may request promotion but do not directly promote releases.",
+  "truth":"DECLARED_RELEASE_BINDING"
+}
