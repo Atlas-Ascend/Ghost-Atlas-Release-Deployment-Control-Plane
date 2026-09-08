@@ -1,0 +1,114 @@
+{
+  "schema": "ghost-atlas.office-fabric.software-convergence-receipt.v1",
+  "receipt_id": "GA-OFFICE-FABRIC-SOFTWARE-CONVERGENCE-20260908-001",
+  "recorded_at": "2026-09-08T07:32:40Z",
+  "scope": "nine-site-office-fabric-software-and-physical-eden-integration",
+  "software_integration_state": "PROVEN",
+  "estate_release_state": "HELD",
+  "identity_authority": "Atlas-Ascend/Eden-2.0/office_fabric/public_estate_registry.py",
+  "canonical_site_ids": [
+    "WDP-000",
+    "WDP-001",
+    "WDP-002",
+    "WDP-003",
+    "WDP-004",
+    "WDP-005",
+    "WDP-006",
+    "WDP-007",
+    "WDP-008"
+  ],
+  "merged_planes": {
+    "service_catalog": {
+      "repository": "Atlas-Ascend/Estate-Service-Catalog-Capability-Registry",
+      "merge_sha": "c8312bff1d77c2b604c399aef4d0c72a759c7e95"
+    },
+    "event_gateway": {
+      "repository": "Atlas-Ascend/Ghost-Atlas-Estate-Event-Gateway",
+      "merge_sha": "66d2420374a714ed428e88b2eb9728bdc011a1ee"
+    },
+    "service_mesh": {
+      "repository": "Atlas-Ascend/Ghost-Atlas-Estate-Service-Mesh-Runtime-Connectivity-Fabric",
+      "merge_sha": "da70b973f34f407d32c985e8f349696ccc1ccb29"
+    },
+    "workforce_spine": {
+      "repository": "Atlas-Ascend/workforce-spine",
+      "merge_sha": "d4c2656861b93511684b275c20d5d40cc98e39a5"
+    },
+    "release_control": {
+      "repository": "Atlas-Ascend/Ghost-Atlas-Release-Deployment-Control-Plane",
+      "merge_sha": "52a7d78a31a2949d2c219f5a6b73712cd4c3a29c"
+    },
+    "web_runtime": {
+      "repository": "Atlas-Ascend/nextjs-boilerplate",
+      "merge_sha": "9a8d0d1e37290fc5aa5b0fff9b6db331f9de4740",
+      "vercel_checks": [
+        {
+          "context": "Vercel – nextjs-boilerplate",
+          "state": "success"
+        },
+        {
+          "context": "Vercel – nextjs-boilerplate-gfhn",
+          "state": "success"
+        }
+      ]
+    },
+    "eden_runtime_authority": {
+      "repository": "Atlas-Ascend/Eden-2.0",
+      "merge_sha": "5aac5297456145224df0cd5e55ad21ee8cbedf28",
+      "proved_head_sha": "650ffb1608d4c221b150e24f7bcd5c1c1a660cdb",
+      "proved_merge_ref": "bb9724e1273bd9e649531e867322b533c270b34b"
+    }
+  },
+  "physical_eden_proof": {
+    "node": "EDEN",
+    "canonical_python": "E:\\Atlantis\\12-RUNTIME\\Python\\3.12.10\\python.exe",
+    "sovereign_office_integration": {
+      "workflow_run_id": 34199458671,
+      "conclusion": "success",
+      "state": "PROVEN",
+      "canonical_web_site_count": 9,
+      "domain_office_count": 9,
+      "universal_instrumentation_state": "LIVE",
+      "context_receipt_id": "UNIVERSAL-20260908T073240Z-358835f18e",
+      "telemetry_receipt_id": "UNIVERSAL-20260908T073240Z-90f93c8d39",
+      "proof_path": "E:\\Atlantis\\13-PROOF\\System\\Sovereign-Office-Integration\\SOVEREIGN-OFFICE-INTEGRATION-LATEST.json"
+    },
+    "bounded_executor": {
+      "workflow_run_id": 34199458608,
+      "conclusion": "success",
+      "test_count": 94,
+      "tests_state": "PASS",
+      "packet_id": "EDEN-SELFTEST-001",
+      "packet_status": "PASS",
+      "packet_return_code": 0,
+      "packet_receipt_sha256": "d4646411c64f14076c993a669ecc474d5243f611c30ed98afaa73fc168461512",
+      "persisted_receipt_path": "E:\\Atlantis\\13-PROOF\\System\\EDEN-Bounded-Executor\\EDEN-BOUNDED-EXECUTOR-bb9724e1273b.json",
+      "persisted_receipt_sha256": "e038f21fdab882efcff5da8265503d0587e8fb105143578abc0fc18bf3ac2668"
+    }
+  },
+  "neon_projection": {
+    "project": "ghost-atlas-estate-registry",
+    "project_id": "billowing-moon-84254590",
+    "temporary_branch_id": "br-crimson-lake-ayxatgp9",
+    "temporary_branch_test": "PASS",
+    "production_applied": false,
+    "production_gate": "EXPLICIT_DATABASE_MIGRATION_APPROVAL_REQUIRED"
+  },
+  "remaining_production_gates": [
+    "production-neon-migration-approval",
+    "custom-domain-attachment-and-dns-proof",
+    "tls-proof-per-domain",
+    "production-host-routing-proof-per-domain",
+    "production-site-identity-isolation-proof",
+    "production-telemetry-context-proof",
+    "site-scoped-release-receipts",
+    "all-nine-proofgrid-release-receipt"
+  ],
+  "promotion_law": {
+    "repository_proof_is_runtime_proof": false,
+    "software_integration_proof_is_production_release": false,
+    "external_publish_default": "disabled",
+    "all_nine_required_for_estate_release": true
+  },
+  "truth_boundary": "The nine-site Office Fabric software, estate contracts, Vercel-built web mainline, and physical EDEN integration are proven. This receipt does not claim that all custom domains are attached or live, does not apply the production Neon migration, and does not promote the all-nine estate release."
+}
