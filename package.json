@@ -1,0 +1,23 @@
+{
+  "name": "ghost-atlas-release-deployment-control-plane",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Ghost Atlas continuous delivery, release engineering, and deployment orchestration control plane.",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "tsx --test tests/**/*.test.ts",
+    "verify": "npm run typecheck && npm test && npm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}
