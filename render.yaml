@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: ghost-atlas-release-deployment-control-plane
+    runtime: node
+    plan: starter
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: false
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: PORT
+        value: 8787
+      - key: GA_EVENT_GATEWAY_URL
+        sync: false
+      - key: GA_RENDER_DEPLOY_HOOK_URL
+        sync: false
+      - key: GA_RENDER_LIVE_URL
+        sync: false
+      - key: GA_VERCEL_DEPLOY_HOOK_URL
+        sync: false
+      - key: GA_VERCEL_LIVE_URL
+        sync: false
+      - key: GA_GITHUB_DEPLOY_HOOK_URL
+        sync: false
+      - key: GA_EDEN_DEPLOY_HOOK_URL
+        sync: false
+      - key: GA_EDEN_LIVE_URL
+        sync: false
