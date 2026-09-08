@@ -1,5 +1,13 @@
 # Build Truth — GA Release Deployment Control Plane v0.1.0
 
+## Verified baseline
+
+```text
+VERIFIED_SHA=d208da492f6d93cf09694709ab57a32bd6226a24
+GITHUB_ACTIONS_RUN=34176018234
+CI_VERIFY=PASS
+```
+
 ## Required gates
 
 ```text
@@ -10,16 +18,17 @@ PROMOTION_STATE_MACHINE=PASS
 DEPLOYMENT_ADAPTER_BOUNDARY=PASS
 ROLLBACK_POINT_CONTRACT=PASS
 ESTATE_EVENT_ENVELOPE=PASS
+ESTATE_EVENT_GATEWAY_PUBLISHER=PASS
 DEPLOYMENT_RECEIPT=PASS
 HTTP_CONTROL_API=PASS
-TYPECHECK=PENDING_CI
-TESTS=PENDING_CI
-BUILD=PENDING_CI
+TYPECHECK=PASS
+TESTS=PASS
+BUILD=PASS
 ```
 
 ## Proof criteria
 
-The implementation must prove all of the following:
+The verified implementation proves all of the following:
 
 - a build with any failed Build Truth / DevOS / SECA gate is rejected
 - a qualified build can become a release
@@ -28,8 +37,12 @@ The implementation must prove all of the following:
 - successful deployment produces `HEALTH_GATE=PASS`
 - successful deployment produces a sealed proof receipt
 - release/deployment events carry a correlation ID
+- configured estate events publish to `GA_EVENT_GATEWAY_URL`
 - rollback transitions deployment and release state to `rolled_back`
-- provider credentials are externalized from source
+- provider credentials and deploy hooks are externalized from source
+- strict TypeScript compilation passes
+- automated state-machine tests pass
+- production JavaScript build passes
 
 ## Production hardening queue
 
@@ -43,9 +56,8 @@ The implementation must prove all of the following:
 7. active health-probe policies
 8. canary and progressive rollout strategy
 9. automatic rollback policy
-10. Estate Event Gateway publisher
-11. Runtime Observatory live feed
-12. Command Center release console
+10. Runtime Observatory live feed consumer contract
+11. Command Center release console
 ```
 
-The v0.1.0 objective is to establish the executable control-plane contract and verify its state-machine invariants before provider-specific hardening.
+v0.1.0 establishes and verifies the executable release/deployment state machine, provider boundary, proof receipt contract, Render deployment blueprint, and Estate Event Gateway publication seam.
