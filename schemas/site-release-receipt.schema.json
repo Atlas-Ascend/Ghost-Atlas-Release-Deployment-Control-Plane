@@ -8,7 +8,7 @@
   "properties": {
     "schema": { "const": "ghost-atlas.site-release-receipt.v1" },
     "releaseId": { "type": "string", "minLength": 4 },
-    "siteId": { "type": "string", "pattern": "^SITE-[A-Z0-9-]+$" },
+    "siteId": { "type": "string", "pattern": "^WDP-[0-9]{3}$" },
     "officeId": { "type": "string", "pattern": "^OFFICE-[A-Z0-9-]+$" },
     "domain": { "type": "string" },
     "commitSha": { "type": "string", "minLength": 7 },
@@ -16,6 +16,7 @@
     "environment": { "type": "string", "enum": ["preview", "production"] },
     "correlationId": { "type": "string" },
     "runId": { "type": "string" },
+    "identityAuthority": { "const": "Atlas-Ascend/Eden-2.0/office_fabric/public_estate_registry.py" },
     "checks": {
       "type": "object",
       "required": ["build", "dns", "tls", "http", "hostRouting", "identityIsolation", "telemetryContext", "securityBoundary"],
