@@ -15,8 +15,8 @@ export interface DeployHookConfig {
 
 export class DeployHookAdapter implements DeploymentAdapter {
   readonly provider: ProviderName;
-  private readonly hookUrl?: string;
-  private readonly liveUrl?: string;
+  private readonly hookUrl: string | undefined;
+  private readonly liveUrl: string | undefined;
 
   constructor(config: DeployHookConfig) {
     this.provider = config.provider;
