@@ -28,7 +28,7 @@ adapters.register(new DeployHookAdapter({
 }));
 
 const store = new ControlPlaneStore();
-const events = new EstateEventBus();
+const events = new EstateEventBus(process.env.GA_EVENT_GATEWAY_URL);
 const engine = new ReleaseDeploymentEngine(store, events, adapters);
 const server = createControlPlaneServer(engine, events);
 
