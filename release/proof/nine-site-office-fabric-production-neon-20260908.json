@@ -1,0 +1,68 @@
+{
+  "schema": "ghost-atlas.office-fabric.production-neon-receipt.v1",
+  "receipt_id": "GA-OFFICE-FABRIC-PRODUCTION-NEON-20260908-001",
+  "recorded_at": "2026-09-08T07:45:49Z",
+  "scope": "nine-site-office-fabric-production-neon-migration",
+  "production_neon_state": "PROVEN",
+  "estate_release_state": "HELD",
+  "authorization": "EXPLICIT_USER_APPROVAL_RECEIVED",
+  "neon": {
+    "project": "ghost-atlas-estate-registry",
+    "project_id": "billowing-moon-84254590",
+    "database": "neondb",
+    "production_branch_id": "br-crimson-unit-aylrqlrm",
+    "original_tested_branch_id": "br-crimson-lake-ayxatgp9",
+    "migration_id": "19ca15cc-b0c0-40bb-87e5-d138f46d1254",
+    "fresh_validation_branch_id": "br-shy-tree-aygx4pjc",
+    "fresh_validation_branch_deleted_after_apply": true,
+    "migration_apply_result": "SUCCESS"
+  },
+  "migration_contract": {
+    "tables_added": [
+      "estate_registry.office_sites",
+      "estate_registry.office_event_ledger",
+      "estate_registry.office_release_receipts"
+    ],
+    "schema_diff_fresh_vs_original_tested": "EMPTY",
+    "schema_diff_production_vs_original_tested": "EMPTY",
+    "canonical_registry_digest": "b1c541cb93200434c3fce2cbd1911f7e",
+    "canonical_registry_digest_matches_original_tested": true,
+    "canonical_site_count": 9,
+    "unique_site_ids": true,
+    "unique_office_ids": true,
+    "unique_domains": true,
+    "unique_slugs": true,
+    "office_event_ledger_live": true,
+    "office_release_receipts_live": true,
+    "office_event_rows_at_verification": 0,
+    "office_release_rows_at_verification": 0
+  },
+  "canonical_site_ids": [
+    "WDP-000",
+    "WDP-001",
+    "WDP-002",
+    "WDP-003",
+    "WDP-004",
+    "WDP-005",
+    "WDP-006",
+    "WDP-007",
+    "WDP-008"
+  ],
+  "identity_authority": "Atlas-Ascend/Eden-2.0/office_fabric/public_estate_registry.py",
+  "predecessor_receipt": "release/proof/nine-site-office-fabric-software-convergence-20260908.json",
+  "remaining_production_gates": [
+    "custom-domain-attachment-and-dns-proof",
+    "tls-proof-per-domain",
+    "production-host-routing-proof-per-domain",
+    "production-site-identity-isolation-proof",
+    "production-telemetry-context-proof",
+    "site-scoped-release-receipts",
+    "all-nine-proofgrid-release-receipt"
+  ],
+  "promotion_law": {
+    "production_database_migration_is_estate_release": false,
+    "external_publish_default": "disabled",
+    "all_nine_required_for_estate_release": true
+  },
+  "truth_boundary": "The production Neon Office Fabric schema and canonical nine-site registry are applied and verified on the production main branch. This receipt does not claim that all custom domains are attached, DNS/TLS is proven, production host routing is proven, or the all-nine public estate release is promoted."
+}
