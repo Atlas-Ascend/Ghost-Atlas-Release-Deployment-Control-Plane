@@ -1,0 +1,10 @@
+schema: ghost-atlas.global-sync-pointer/v1
+event_id: GLOBAL-ALIGNMENT-RESONANCE-SYNC-ODDEC-20260909T195015-0700
+canonical_manifest: Atlas-Ascend/Ghost-Atlas-Distributed-Agentic-Organism/06-TOPOLOGY/GLOBAL_ALIGNMENT_RESONANCE_SYNC_ODDEC_20260909T195015-0700.yaml
+channel: throat_expression
+organ: Ghost-Atlas-Release-Deployment-Control-Plane
+state: aligned
+role: release-deploy-public-expression
+oddec: full
+surfaces: [render, vercel, public-web, command-ui]
+invariants: [deploy_only_verified_artifacts, preserve_provider_provenance, proof_before_promotion]
