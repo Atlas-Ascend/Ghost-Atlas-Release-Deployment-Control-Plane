@@ -1,0 +1,51 @@
+version: "1.0.0"
+contract: GA-ESTATE-CLOUD-FABRIC-ADDENDUM-2026-09-09
+estate: Ghost Atlas
+generated_from:
+  github:
+    owner: Atlas-Ascend
+    repository_count: 78
+    inventory_state: COMPLETE
+  render:
+    workspace_id: tea-d8ghr467r5hc73b6jst0
+    observed_direct_repository_count: 16
+    observed_service_count: 24
+  vercel:
+    team_id: team_DsWa4h5JsUMelhlqijg1wPx3
+    team_slug: ghost-atlas
+    observed_project_count: 12
+    direct_github_repository_count: 3
+  neon:
+    organization_id: org-sweet-king-59984504
+    observed_project_count: 4
+    projects:
+      ghost-atlas-estate-registry:
+        id: billowing-moon-84254590
+        region: aws-us-east-2
+      ghost-atlas-trifinity:
+        id: lingering-wave-63147168
+        region: aws-us-east-2
+      atlas-mind-commercial:
+        id: blue-silence-13723131
+        region: aws-us-east-2
+      atlas-mind-command-center:
+        id: ancient-mud-00515851
+        region: aws-us-east-1
+routing_law:
+  - Every Atlas-Ascend repository must have exactly one fabric classification.
+  - Every repository must have a Render disposition, Vercel disposition, and Neon project disposition.
+  - Direct provider bindings are preferred when they already exist and are canonical.
+  - Non-deployable libraries, doctrines, templates, archives, and hardware definitions attach to their shared fabric; they do not create duplicate standalone compute.
+  - Git remains source-of-truth for identity and ownership.
+  - Neon stores durable runtime/presence/data truth; it is not a frontend host.
+  - Vercel is the preferred public/operator web surface.
+  - Render is the preferred resident API/worker/service runtime.
+  - EDEN and hardware nodes remain sovereign/local capability providers behind the Hypernet boundary.
+  - Provider credentials are never committed to Git.
+proof:
+  github_repositories_enrolled: 78
+  github_repositories_missing: 0
+  direct_render_repositories_observed: 16
+  direct_vercel_git_repositories_observed: 3
+  neon_projects_observed: 4
+  binding_table: repository-provider-bindings.csv
