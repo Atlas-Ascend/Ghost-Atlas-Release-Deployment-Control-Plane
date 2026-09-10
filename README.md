@@ -66,6 +66,22 @@ COMMAND → BUILD → VERIFY → PACKAGE → RELEASE → DEPLOY → HEALTH → O
 
 Adapters are explicit boundaries. Provider credentials are never committed to this repository.
 
+## Estate cloud fabric addendum
+
+The complete GitHub → Render → Vercel → Neon estate binding contract is maintained under [`build-truth/estate-cloud-fabric-addendum`](build-truth/estate-cloud-fabric-addendum/README.md).
+
+Current sealed inventory target:
+
+```text
+ATLAS_ASCEND_REPOSITORIES=78
+RENDER_DISPOSITION=78/78
+VERCEL_DISPOSITION=78/78
+NEON_DISPOSITION=78/78
+OMITTED=0
+```
+
+The addendum distinguishes direct provider deployments from shared-fabric/shared-surface participation so libraries, doctrine, hardware definitions, archives, and non-deployable repositories remain connected without manufacturing duplicate infrastructure.
+
 ## API
 
 ```text
