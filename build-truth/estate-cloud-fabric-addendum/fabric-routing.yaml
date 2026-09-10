@@ -1,0 +1,68 @@
+version: "1.0.0"
+contract: GA-CLOUD-FABRIC-ROUTING-1.0
+fabrics:
+  estate-core:
+    gateway_repo: Atlas-Ascend/VISHVARUPA-Software-Hardware-Organism
+    render_shared_target: vishvarupa-organism
+    vercel_shared_target: ghost-atlas-cloud-continuity
+    neon_project: ghost-atlas-trifinity
+  executive-control:
+    gateway_repo: Atlas-Ascend/Ghost-Atlas-Control-Plane
+    render_shared_target: janus-prime-runtime-authorization
+    vercel_shared_target: ghost-atlas-machine-wake-observatory
+    neon_project: atlas-mind-command-center
+  execution-fabric:
+    gateway_repo: Atlas-Ascend/EXECUTION-FABRIC-LIVE-OPERATIONS-THEATER
+    render_shared_target: ghost-atlas-runtime-gateway
+    vercel_shared_target: ghost-atlas-machine-wake-observatory
+    neon_project: atlas-mind-command-center
+  software-factory:
+    gateway_repo: Atlas-Ascend/Ghost-Atlas-Software-Factory-End-to-End-SDLC-Control-Plane
+    render_shared_target: ghost-atlas-runtime-worker-factory
+    vercel_shared_target: ghost-atlas-live-build-showcase
+    neon_project: ghost-atlas-estate-registry
+  release-engineering:
+    gateway_repo: Atlas-Ascend/Ghost-Atlas-Release-Deployment-Control-Plane
+    render_shared_target: ghost-atlas-runtime-gateway
+    vercel_shared_target: ghost-atlas-live-build-showcase
+    neon_project: ghost-atlas-estate-registry
+  estate-discovery:
+    gateway_repo: Atlas-Ascend/Estate-Service-Catalog-Capability-Registry
+    render_shared_target: athena-ai-infrastructure-command-plane
+    vercel_shared_target: ghost-atlas-machine-wake-observatory
+    neon_project: ghost-atlas-estate-registry
+  event-fabric:
+    gateway_repo: Atlas-Ascend/Ghost-Atlas-Estate-Event-Gateway
+    render_shared_target: hermes-public-access-relay
+    vercel_shared_target: ghost-atlas-machine-wake-observatory
+    neon_project: ghost-atlas-estate-registry
+  operator-interface:
+    gateway_repo: Atlas-Ascend/Ghost-Atlas-Command-Center
+    render_shared_target: vishvarupa-organism
+    vercel_shared_target: ghost-atlas-enterprise-bootstrap
+    neon_project: atlas-mind-command-center
+  cognitive-fabric:
+    gateway_repo: Atlas-Ascend/Atlas-Mind-LLM
+    render_shared_target: artemis-local-sovereign-ai
+    vercel_shared_target: atlas-mind-live-surface
+    neon_project: atlas-mind-commercial
+  research-fabric:
+    gateway_repo: Atlas-Ascend/Ghost-Atlas-Research-Institute
+    render_shared_target: ghost-atlas-runtime-gateway
+    vercel_shared_target: ghost-atlas-live-build-showcase
+    neon_project: atlas-mind-commercial
+  office-fabric:
+    gateway_repo: Atlas-Ascend/Ghost-Atlas-HQ
+    render_shared_target: apollo-studio-operations-intelligence
+    vercel_shared_target: ghost-atlas-enterprise-bootstrap
+    neon_project: atlas-mind-commercial
+  hardware-hypernet:
+    gateway_repo: Atlas-Ascend/Hypernet-GMII-Unified-Operating-Model
+    render_shared_target: vishvarupa-organism
+    vercel_shared_target: ghost-atlas-cloud-continuity
+    neon_project: ghost-atlas-trifinity
+  security-verification:
+    gateway_repo: Atlas-Ascend/SECA
+    render_shared_target: heimdall-machine-governor
+    vercel_shared_target: ghost-atlas-machine-wake-observatory
+    neon_project: ghost-atlas-estate-registry
